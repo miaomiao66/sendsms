@@ -1,5 +1,5 @@
 {
-    "name": "test/sendSMS",
+    "name": "test/send-sms",
     "description": "laravel send text message",
     "type": "library",
     "require": {
