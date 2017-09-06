@@ -1,5 +1,5 @@
 {
-    "name": "test/send-sms",
+    "name": "miaoqi/send-sms",
     "description": "laravel send text message",
     "type": "library",
     "require": {
