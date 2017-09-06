@@ -1,0 +1,21 @@
+{
+    "name": "test/sendSMS",
+    "description": "laravel send text message",
+    "type": "library",
+    "require": {
+        "php": "7.1.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "miao",
+            "email": "test@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "SendSms\\": "src/"
+        }
+    }
+}
