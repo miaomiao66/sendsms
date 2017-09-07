@@ -42,7 +42,7 @@ php artisan vendor:publish
 ```
 
 
-## 配置项(.env)
+## 配置项
 
    > 以下为本程序所支持的短信代理平台的配置参考：
 
@@ -57,9 +57,9 @@ php artisan vendor:publish
 
 ## Security
 
-> If you discover any security related issues, please email xzadv@126.com instead of using the issue tracker.
+> If you discover any security related issues, please email miaoq92@163.com instead of using the issue tracker.
 
-> 如果你发现任何相关的问题，请把问题以邮件的形式发送至xzadv@126.com。
+> 如果你发现任何相关的问题，请把问题以邮件的形式发送至miaoq92@163.com。
 
 
 ## License
