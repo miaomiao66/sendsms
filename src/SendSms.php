@@ -34,7 +34,7 @@ class Sms {
 
     public function __construct()
     {
-    	$curConfigs = self::$configs ?? require(dirname(__DIR__).'/config/default.php');
+    	$curConfigs = require(config_path('sendsms.php'));
     	$this->sendUrl = self::getByKey($curConfigs, 'api_send_url');
     	$this->account = self::getByKey($curConfigs, 'api_account');
     	$this->password = self::getByKey($curConfigs, 'api_password');

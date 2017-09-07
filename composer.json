@@ -1,17 +1,19 @@
 {
     "name": "miaoqi/send-sms",
-    "description": "laravel send text message",
     "type": "library",
-    "require": {
-        "php": "7.1.8"
-    },
+    "description": "laravel send text message",
+    "keywords": ["laravel-sms", "laravel sms", "sms"],
+    "homepage": "https://github.com/miaomiao66/sendsms",
     "license": "MIT",
     "authors": [
         {
-            "name": "miao",
-            "email": "test@163.com"
+            "name": "miaoqi",
+            "email": "miaoq92@163.com"
         }
     ],
+    "require": {
+        "php": "7.1.8"
+    },
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
