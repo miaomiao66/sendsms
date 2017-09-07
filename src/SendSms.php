@@ -24,14 +24,6 @@ class Sms {
      */
 	private $password;
 
-	/**
-     * 配置信息
-     *
-     * @var array
-     */
-    protected static $configs;
-
-
     public function __construct()
     {
     	$curConfigs = require(config_path('sendsms.php'));
@@ -94,6 +86,7 @@ class Sms {
 
 	/**
      * 根据key获取value
+     * 
      * @param array $array
      * @param string $key
      * @return NULL|array
