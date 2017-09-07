@@ -53,8 +53,7 @@ php artisan vendor:publish
 'api_send_url' => 'http://sms.253.com/msg/send',  //创蓝发送短信接口网址
 'api_account' => 'your_account',                  //创蓝用户
 'api_password' => 'your_password'                 //创蓝密码
-
-
+```
 
 ## Security
 
