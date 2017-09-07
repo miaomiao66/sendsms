@@ -91,6 +91,17 @@ class Sms {
 		$result=preg_split("/[,\r\n]/",$result);
 		return $result;
 	}
+
+	/**
+     * 根据key获取value
+     * @param array $array
+     * @param string $key
+     * @return NULL|array
+     */
+    private static function getByKey($array, $key)
+    {
+        return array_key_exists($key, $array) ? $array[$key] : NULL;
+    }
 }
 
 ?>
