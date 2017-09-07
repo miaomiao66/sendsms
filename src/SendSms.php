@@ -1,6 +1,7 @@
 <?php
+namespace Miaoqi\SendSms;
 
-class SendSms {
+class Sms {
 
 	/**
      * 请求地址
@@ -37,20 +38,6 @@ class SendSms {
     	$this->sendUrl = self::getByKey($curConfigs, 'api_send_url');
     	$this->account = self::getByKey($curConfigs, 'api_account');
     	$this->password = self::getByKey($curConfigs, 'api_password');
-    }
-
-	/**
-     * 设置自定义配置文件,格式参见config/default.php
-     * 
-     * @param string $filePath  设置的自定义文件的路径
-     */
-    public static function setConfigs(string $filePath)
-    {
-        if ($filePath && file_exists($filePath)) {
-            self::$configs = require($filePath); 
-        } else {
-            throw new MissingException("Unable to load $filePath.");
-        }
     }
 
 	/**
@@ -104,21 +91,6 @@ class SendSms {
 		$result=preg_split("/[,\r\n]/",$result);
 		return $result;
 	}
-
-	/**
-     * 根据key获取value
-     * 
-     * @param array $array
-     * @param string $key
-     * @return NULL|array
-     */
-    private static function getByKey($array, $key)
-    {
-        return array_key_exists($key, $array) ? $array[$key] : NULL;
-    }
 }
-
-$chuang = new Chuanglan();
-$chuang->sendSMS('15010860635', '测试一下');
 
 ?>
