@@ -55,6 +55,7 @@ php artisan vendor:publish
 'api_password' => 'your_password'                 //创蓝密码
 
 
+
 ## Security
 
 > If you discover any security related issues, please email xzadv@126.com instead of using the issue tracker.
