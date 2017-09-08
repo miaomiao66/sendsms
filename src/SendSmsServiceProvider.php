@@ -9,7 +9,7 @@ class SendSmsServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            dirname(dirname(__FILE__)) . '/src/config/default.php' => config_path('sendsms.php')
+            __DIR__ . '/config/default.php' => config_path('sendsms.php')
         ]);
     }
 
