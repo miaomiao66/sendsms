@@ -1,4 +1,5 @@
 <?php
+
 namespace Miaoqi\SendSms;
 
 class Sms 
@@ -27,9 +28,9 @@ class Sms
     public function __construct()
     {
     	$curConfigs = file_exists(config_path('sendsms.php')) ? require(config_path('sendsms.php')) : require(__DIR__ . '/config/default.php');
-    	$this->sendUrl = $this->getByKey($curConfigs, 'api_send_url');
-    	$this->account = $this->getByKey($curConfigs, 'api_account');
-    	$this->password = $this->getByKey($curConfigs, 'api_password');
+    	$this->sendUrl = $curConfigs['api_send_url'];
+    	$this->account = $curConfigs['api_account'];
+    	$this->password = $curConfigs['api_password'];
     }
 
 	/**
@@ -39,7 +40,7 @@ class Sms
 	 * @param string $msg 		  短信内容
 	 * @param string $needstatus  是否需要状态报告
 	 */
-	public static function sendSMS($mobile, $msg, $needstatus = 1) 
+	public function sendSMS($mobile, $msg, $needstatus = 1) 
 	{	
 		$postArr = array(
 				'un' => $this->account,
@@ -73,18 +74,6 @@ class Sms
 		curl_close($ch);
 		return $result;
 	}
-
-	/**
-     * 根据key获取value
-     * 
-     * @param array  $array
-     * @param string $key
-     * @return NULL|array
-     */
-    private function getByKey($array, $key)
-    {
-        return array_key_exists($key, $array) ? $array[$key] : NULL;
-    }
 }
 
 ?>
