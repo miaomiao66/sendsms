@@ -68,7 +68,6 @@ class RongLian
      */
     private $bodyType = "json";
 
-
     /**
      * 构造函数
      *
@@ -86,9 +85,7 @@ class RongLian
         $this->serverIP     = $curConfigs['api_server_ip'];
         $this->serverPort   = $curConfigs['api_server_port'];
         $this->softVersion  = $curConfigs['api_soft_version'];
-
-    }//end __construct()
-
+    }
 
     /**
      * 发起HTTPS请求
@@ -122,9 +119,7 @@ class RongLian
 
         curl_close($ch);
         return $result;
-
-    }//end curl_post()
-
+    }
 
     /**
      * 发送模板短信
@@ -191,9 +186,7 @@ class RongLian
         }
 
         return $datas;
-
-    }//end sendSMS()
-
+    }
 
     /**
      * 主帐号鉴权
@@ -243,8 +236,6 @@ class RongLian
             $data->statusMsg  = '应用ID为空';
             return $data;
         }
+    }
 
-    }//end accAuth()
-
-
-}//end class
+}

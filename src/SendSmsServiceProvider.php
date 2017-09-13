@@ -25,9 +25,7 @@ class SendSmsServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/config/default.php' => config_path('sendsms.php')
         ]);
-
-    }//end boot()
-
+    }
 
     /**
      * 服务注册
@@ -38,7 +36,6 @@ class SendSmsServiceProvider extends ServiceProvider
     public function register()
     {
 
-    }//end register()
+    }
 
-
-}//end class
+}

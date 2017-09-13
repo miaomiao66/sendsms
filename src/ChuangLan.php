@@ -33,7 +33,6 @@ class ChuangLan
      */
     private $password;
 
-
     /**
      * 构造函数
      *
@@ -47,9 +46,7 @@ class ChuangLan
         $this->sendUrl  = $curConfigs['api_send_url'];
         $this->account  = $curConfigs['api_account'];
         $this->password = $curConfigs['api_password'];
-
-    }//end __construct()
-
+    }
 
     /**
      * 发送短信
@@ -72,9 +69,7 @@ class ChuangLan
         $result  = $this->curlPost($this->sendUrl, $postArr);
         $result  = preg_split("/[,\r\n]/", $result);
         return $this->results()[$result[1]];
-
-    }//end sendSMS()
-
+    }
 
     /**
      * 通过CURL发送HTTP请求
@@ -96,9 +91,7 @@ class ChuangLan
         $result = curl_exec($ch);
         curl_close($ch);
         return $result;
-
-    }//end curlPost()
-
+    }
 
     /**
      * 创蓝接口返回参数
@@ -134,8 +127,6 @@ class ChuangLan
                 '124' => '白模板匹配错误',
                 '125' => '驳回模板匹配错误',
                );
+    }
 
-    }//end results()
-
-
-}//end class
+}
