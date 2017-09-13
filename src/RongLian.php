@@ -146,14 +146,14 @@ class RongLian
         // 拼接请求包体.
         if ($this->bodyType == "json") {
             $data = "";
-            for ($i=0; $i<count($datas); $i++) {
+            for ($i = 0; $i < count($datas); $i++) {
                 $data = $data . "'" . $datas[$i] . "',";
             }
 
             $body = "{'to':'$to','templateId':'$tempId','appId':'$this->appId','datas':[" . $data . "]}";
         } else {
             $data = "";
-            for ($i=0; $i<count($datas); $i++) {
+            for ($i = 0; $i < count($datas); $i++) {
                 $data = $data. "<data>" . $datas[$i] . "</data>";
             }
 
