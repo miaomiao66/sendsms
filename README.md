@@ -1,13 +1,13 @@
 # laravel-sms
 
 
-基于laravel5开发的手机短信服务包
+Mobile phone short message service package based on laravel5
 
 
-  > 支持：创蓝253,容联·云通讯
+  > support:创蓝253,容联·云通讯
 
 
-## 安装
+## installation
 
 Via Composer
 
@@ -22,27 +22,27 @@ composer.json
 "miaoqi/send-sms": "dev-master"
 ```
 
-## 配置
+## configuration
 
 ``` php
-//服务提供者
+//service provider
 'providers' => [
         // ...
         Miaoqi\SendSms\SendSmsServiceProvider::class
     ]
     
-//别名
+//aliases
 'aliases' => [
     //...
     'SendSms' => Miaoqi\SendSms\Sms::class    
 ]
 
-//创建配置文件
+//create the configuration file
 php artisan vendor:publish
 ```
 
 
-## 配置项
+## configuration items
 
    > 以下为本程序所支持的短信代理平台的配置参考：
 
