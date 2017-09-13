@@ -76,8 +76,8 @@ class RongLian
      */
     function __construct()
     {
-        // $curConfigs = file_exists(config_path('sendsms.php')) ? require(config_path('sendsms.php')) : require(__DIR__ . '/config/default.php');
-        $curConfigs         = require __DIR__ . '/config/default.php';
+        $curConfigs = file_exists(config_path('sendsms.php')) ? require(config_path('sendsms.php')) : require(__DIR__ . '/config/default.php');
+        // $curConfigs         = require __DIR__ . '/config/default.php';
         $curConfigs         = $curConfigs['agents']['RongLian'];
         $this->batch        = date("YmdHis");
         $this->accountSid   = $curConfigs['api_account_sid'];
