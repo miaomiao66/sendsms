@@ -150,7 +150,7 @@ class RongLian
                 $data = $data . "'" . $datas[$i] . "',";
             }
 
-            $body = "{'to':'$to','templateId':'$tempId','appId':'$this->AppId','datas':[" . $data . "]}";
+            $body = "{'to':'$to','templateId':'$tempId','appId':'$this->appId','datas':[" . $data . "]}";
         } else {
             $data = "";
             for ($i=0; $i<count($datas); $i++) {
@@ -163,13 +163,13 @@ class RongLian
         // 大写的sig参数.
         $sig = strtoupper(md5($this->accountSid . $this->accountToken . $this->batch));
         // 生成请求URL.
-        $url = "https://$this->ServerIP:$this->ServerPort/$this->SoftVersion/Accounts/$this->AccountSid/SMS/TemplateSMS?sig=$sig";
+        $url = "https://$this->serverIP:$this->serverPort/$this->softVersion/Accounts/$this->accountSid/SMS/TemplateSMS?sig=$sig";
         // 生成授权:主帐户Id + 英文冒号 + 时间戳.
         $authen = base64_encode($this->accountSid . ":" . $this->batch);
         // 生成包头.
         $header = array(
-                   "Accept:application/$this->BodyType",
-                   "Content-Type:application/$this->BodyType;charset=utf-8",
+                   "Accept:application/$this->bodyType",
+                   "Content-Type:application/$this->bodyType;charset=utf-8",
                    "Authorization:$authen",
                   );
         // 发送请求.
